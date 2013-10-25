@@ -6913,7 +6913,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnLoad>HealBot_Options_valNoCols_OnLoad(self,1,12)</OnLoad>
+                      <OnLoad>HealBot_Options_valNoCols_OnLoad(self,1,12);</OnLoad>
                       <OnValueChanged>HealBot_Options_BarNumColsS_OnValueChanged(self)</OnValueChanged>
                     </Scripts>
                   </Slider>
