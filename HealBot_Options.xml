@@ -1507,7 +1507,7 @@
             <Frames>
               <Frame name="HealBot_Options_GenFrame">
                 <Size>
-                  <AbsDimension y="335"/>
+                  <AbsDimension y="275"/>
                 </Size>
                 <Anchors>
                   <Anchor point="TOPLEFT">
@@ -1537,7 +1537,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="30" y="-30" />
+                          <AbsDimension x="28" y="-15" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1549,7 +1549,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT" relativeTo="HealBot_Options_HideOptions" relativePoint="TOPRIGHT">
                         <Offset>
-                          <AbsDimension x="225" y="0" />
+                          <AbsDimension x="255" y="0" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1561,7 +1561,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT" relativeTo="HealBot_Options_HideOptions" relativePoint="BOTTOMLEFT">
                         <Offset>
-                          <AbsDimension x="0" y="-15" />
+                          <AbsDimension x="0" y="-12" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1571,9 +1571,9 @@
                   </CheckButton>
                   <CheckButton name="HealBot_Options_QueryTalents" inherits="OptionsCheckButtonTemplate">
                     <Anchors>
-                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowMinimapButton" relativePoint="TOPRIGHT">
+                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_RightButtonOptions" relativePoint="BOTTOMLEFT">
                         <Offset>
-                          <AbsDimension x="225" y="0" />
+                          <AbsDimension x="0" y="-12" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1585,7 +1585,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowMinimapButton" relativePoint="BOTTOMLEFT">
                         <Offset>
-                          <AbsDimension x="135" y="-25" />
+                          <AbsDimension x="0" y="-12" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1593,11 +1593,23 @@
                       <OnClick>HealBot_Options_EnableLibQuickHealth_OnClick(self)</OnClick>
                     </Scripts>
                   </CheckButton>
+                  <CheckButton name="HealBot_Options_EnableAutoCombat" inherits="OptionsCheckButtonTemplate">
+                    <Anchors>
+                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_QueryTalents" relativePoint="BOTTOMLEFT">>
+                        <Offset>
+                          <AbsDimension x="0" y="-12" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Options_EnableAutoCombat_OnClick(self)</OnClick>
+                    </Scripts>
+                  </CheckButton>
                   <CheckButton name="HealBot_Options_NoAuraWhenRested" inherits="OptionsCheckButtonTemplate">
                     <Anchors>
                       <Anchor point="TOPLEFT" relativeTo="HealBot_Options_EnableLibQuickHealth" relativePoint="BOTTOMLEFT">>
                         <Offset>
-                          <AbsDimension x="0" y="-15" />
+                          <AbsDimension x="0" y="-12" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1607,9 +1619,9 @@
                   </CheckButton>
                   <CheckButton name="HealBot_Options_DisableHealBotOpt" inherits="OptionsCheckButtonTemplate">
                     <Anchors>
-                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_NoAuraWhenRested" relativePoint="BOTTOMLEFT">>
+                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_EnableAutoCombat" relativePoint="BOTTOMLEFT">>
                         <Offset>
-                          <AbsDimension x="0" y="-15" />
+                          <AbsDimension x="0" y="-12" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1634,9 +1646,9 @@
                       <AbsDimension x="345" y="16" />
                     </Size>
                     <Anchors>
-                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_DisableHealBotOpt" relativePoint="BOTTOMLEFT">>
+                      <Anchor point="BOTTOM">
                         <Offset>
-                          <AbsDimension x="-32" y="-60" />
+                          <AbsDimension x="-0" y="28" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -1646,12 +1658,12 @@
                   </Slider>
                 </Frames>
               </Frame>
-              
+
               <Frame name="HealBot_Options_hbLangs" inherits="UIDropDownMenuTemplate">
                 <Anchors>
                   <Anchor point="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="170" y="-375" />
+                      <AbsDimension x="170" y="-340" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -1688,12 +1700,12 @@
                 </Scripts>
               </Button>
               
-              
+
               <Frame name="HealBot_Options_hbCommands" inherits="UIDropDownMenuTemplate" id="1">
                 <Anchors>
                   <Anchor point="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="170" y="-417" />
+                      <AbsDimension x="170" y="-400" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -1735,7 +1747,7 @@
                 <Anchors>
                   <Anchor point="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="170" y="-459" />
+                      <AbsDimension x="170" y="-460" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -7735,6 +7747,18 @@
                       <OnClick>HealBot_Options_ShowNameOnBar_OnClick(self)</OnClick>
                     </Scripts>
                   </CheckButton>
+                  <CheckButton name="HealBot_Options_TextlibUTF8" inherits="SendMailRadioButtonTemplate">
+                    <Anchors>
+                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowNameOnBar" relativePoint="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="20" y="-22"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Options_libUTF8_OnClick(self)</OnClick>
+                    </Scripts>
+                  </CheckButton>
                   <CheckButton name="HealBot_Options_NumberTextLines" inherits="OptionsCheckButtonTemplate">
                     <Anchors>
                       <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowNameOnBar" relativePoint="TOPLEFT">
@@ -7926,7 +7950,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="80" y="-50" />
+                          <AbsDimension x="80" y="-40" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -7938,7 +7962,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="230" y="-50" />
+                          <AbsDimension x="80" y="-95" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -7946,11 +7970,35 @@
                       <OnClick>HealBot_Options_ShowDebuffIcon_OnClick(self)</OnClick>
                     </Scripts>
                   </CheckButton>
+                  <CheckButton name="HealBot_Options_ShowDirection" inherits="OptionsCheckButtonTemplate">
+                    <Anchors>
+                      <Anchor point="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="320" y="-40" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Options_ShowDirection_OnClick(self)</OnClick>
+                    </Scripts>
+                  </CheckButton>
+                  <CheckButton name="HealBot_Options_ShowDirectionMouseOver" inherits="SendMailRadioButtonTemplate">
+                    <Anchors>
+                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowDirection" relativePoint="BOTTOMLEFT">
+                        <Offset>
+                          <AbsDimension x="28" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Options_ShowDirectionMouseOver_OnClick(self)</OnClick>
+                    </Scripts>
+                  </CheckButton>
                   <CheckButton name="HealBot_Options_ShowReadyCheck" inherits="OptionsCheckButtonTemplate">
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="385" y="-50" />
+                          <AbsDimension x="320" y="-95" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -7962,7 +8010,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="230" y="-115" />
+                          <AbsDimension x="230" y="-150" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -7974,7 +8022,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="112" y="-170"/>
+                          <AbsDimension x="112" y="-195"/>
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -8022,7 +8070,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="112" y="-155"/>
+                          <AbsDimension x="112" y="-180"/>
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -8070,7 +8118,7 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="128" y="-235"/>
+                          <AbsDimension x="128" y="-255"/>
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -8080,7 +8128,7 @@
                           <Anchors>
                             <Anchor point="RIGHT" relativePoint="LEFT">
                               <Offset>
-                                <AbsDimension x="-10" y="-5" />
+                                <AbsDimension x="-10" y="-8" />
                               </Offset>
                             </Anchor>
                           </Anchors>

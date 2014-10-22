@@ -14,6 +14,136 @@
 <a href="http://healbot.darktech.org/">HealBot Continued</a> - Change Log
 </span><br>
 <br>
+v6.0.2.2<br>
+=================<br>
+* Updates to Buff and Debuffs thanks to Spankyham<br>
+* Updated Russian localizations<br>
+* Fixed Minimap not working not working<br>
+* Minor fixes related to 6.0.2 API changes<br>
+* Updated checking for known spells, avoid issues with non En clients<br>
+* Fixed a rare nasty bug that can happen on logon when a skin has been previously deleted on a different character<br>
+* Settings automatically defaulted when updating from a version older than 5.0.x<br>
+-- If updating from a very old version, first update to 6.0.2.1 to avoid reset<br>
+<br>
+v6.0.2.1<br>
+=================<br>
+* Updates to Buff and Debuffs thanks to Spankyham<br>
+* Fixed a number of spells not appearing due to changes in spellId's - Thanks Spankyham<br>
+* Fixed issue with Russian and Greek localizations<br>
+* Fixed Disable Healbot not working<br>
+* Fixed Toggle mount on mouse wheel not working<br>
+* Fixed Auto Target and Trinkets not working on Spells tab<br>
+<br>
+v6.0.2.0<br>
+=================<br>
+* WoD Ready<br>
+<br>
+v5.4.8.5<br>
+=================<br>
+* Significant update to prepare for WoD<br>
+* Updated Russian localizations<br>
+<br>
+v5.4.8.4<br>
+=================<br>
+* Fix for 5.4.8.3 where healbot can start in a disabled state on first load<br>
+<br>
+v5.4.8.3<br>
+=================<br>
+* Embedded and used LDB and LDBIcon libraries, this replaces very old minimap code and Titan_HealBot.<br>
+- This means there is no longer a need for separate Titan_HealBot or any other LDB addons designed for HealBot.<br>
+<br>
+v5.4.8.2<br>
+=================<br>
+* Added Greek localizations - Thanks to Snaomi - If on an en client, check out the addon GrFont for displaying the Greek character set<br>
+* Updated Italian localizations<br>
+* Updated libraries<br>
+* Added 10 additional freeware/public domain fonts<br>
+<br>
+v5.4.8.1<br>
+=================<br>
+* Major German Localization update - Thanks to Snaomi<br>
+* Added option Only on Mouse Over to Skins>Frames>Icons, this option is used with the Show Out of Range Direction arrow<br>
+<br>
+v5.4.8.0<br>
+=================<br>
+* While in combat and player has been Charmed or under Mind Control ect, if cure>Debuff option "Ignore if caster is Friend" is used then check all debuffs when player gains control<br>
+* Added direction arrow for players needing heal out of range. To turn off, go to options Skins>Frames>Icon tab<br>
+* Update to resurrection indicator to include mass resurrection<br>
+* Localization update<br>
+<br>
+v5.4.7.3<br>
+=================<br>
+* Minor fix to check self buffs on load<br>
+* A number of performance improvements<br>
+* Improvements with resurrection indicator<br>
+* Improvements with Entering/Leaving combat when using Auto Combat<br>
+* UnitName switched to UnitFullName, avoid possible issue with x-realm players<br>
+* Added option Customise Name to Healbot Menu ("hbmenu" spell command), set custom names on bars<br>
+* Added option Enable UTF8 library to Skins>Frames>Bar Text<br>
+- Enable UTF8 NOTE: This is a global option, not a skin option<br>
+- Enable UTF8 NOTE: If you only play on an English or some Western European servers - Turn this off for a slight performance improvement<br>
+<br>
+v5.4.7.2<br>
+=================<br>
+* Fix Shaman issue introduced in 5.4.7.1<br>
+<br>
+v5.4.7.1  <B>Recommend: "Reset Custom Debuffs" using commands dropdown on the options General tab</B><br>
+=================<br>
+* Localization update<br>
+* Now possible to bind hostile spells on all bars<br>
+* Improvement with custom debuffs when altering priority on a pre defined custom debuff<br>
+* Default custom debuff categories updated by Spankyham<br>
+<br>
+v5.4.7.0<br>
+=================<br>
+* Added Enable HealBot autoCombat option on the General tab<br>
+* Fixed bars remain with "unknown" when leaving a group/raid while in combat<br>
+* Minor bug fix with reset focus on target<br>
+<br>
+v5.4.2.1<br>
+=================<br>
+* Added Seal of Justice buff for Retribution Paladin's<br>
+* Added Trap Launcher buff for Hunters<br>
+* Default custom debuff categories updated by Spankyham<br>
+* Healbot now enters combat mode as soon as any <u>visible</u> unit in the group/raid enters combat with aggro<br>
+* Healbot auto combat mode disabled in battlegrounds and arenas<br>
+* Minor tooltip updates<br>
+* Added html doc in doc folder about 2Moons real time space strategy game<br>
+<br>
+v5.4.2.0  <B>Recommend: "Reset Custom Debuffs" using commands dropdown on the options General tab</B><br>
+=================<br>
+* Fixed highlight targeted unit on bar - option on Skins>Aggro<br>
+* Minor fix to random mount on mouse wheel<br>
+* Added Group to tooltip, uses same location as threat and only shown when in a raid and unit has no threat<br>
+* Default custom debuff categories updated by Spankyham<br>
+* Change of functionality with Bar Colour option on Cures>Custom tab, the option now switches on/off the bar colour for custom debuffs and default custom debuffs<br>
+- Previously this option didn't affect custom default colours, it was designed to allow custom colours to switch between a custom colour and a default custom colour<br>
+* Fixed Enemy bar occasionally shows incoming heal when previous target was friendly with incoming heal<br>
+* Fixed Enemy bars don't show in test bars under certain conditions<br> 
+* Priest's Hymn of Hope buff now only shown when mana below 50%, to change the value use "/hb shhp n" so to set 75% "/hb shhp 75"<br>
+* Healbot now enters combat mode as soon as any unit in the group/raid enters combat with aggro, instead of when the player enter combat<br> 
+* Fixed Enemy bars don't show on first combat encounter after zoning in/out of an instance or ui reload<br> 
+* An optional way to hide Blizzard Raid Frames is available that simply disables the Blizzard addons Blizzard_CompactRaidFrames and Blizzard_CUFProfiles, to toggle between methods use "/hb hrfm"<br>
+* "Reload UI required" message with certain options now gives more information<br>
+<br>
+v5.4.0.6<br>
+=================<br>
+* All non en Localizations updated for changes in 5.4.0.5<br>
+* Fixed minor issue with bar text, seperate incoming heal sometimes appened K when its the value has not been devided by 1000<br>
+<br>
+v5.4.0.5 <B>Recommend: "Reset Custom Debuffs" using commands dropdown on the options General tab</B><br>
+=================<br>
+* More custom Debuffs added for 5.4 boss fights - Thanks to Spankyham on HealBot site for all work done for this<br>
+* New default custom debuffs category Important Debuffs (Priority 9) added<br>
+* Each of the 4 Custom debuffs categories can be deleted the traditional way using commands on the General tab or now directly on the Cures>Custom tab<br>
+* Minor improvements on the Cures>Custom tab<br>
+* Added "Auto" to the Bar Text format, automatically shortens numeric values and sets number of decimal points depending on the value<br>
+* Possible fix for spells not updating after spec change (Although this works for me and unable to replicate the reported issue)<br>
+* Fix for health value displayed when using deltas<br> 
+* Heal groups Tanks, Healers and Pets are now included in the Raid groups mask as set on the Skins>Healing>Raid sub tab<br>
+* Fix for icons disapear when using certain totems<br>
+* Fix for Bottom Bar anchors when using Headers<br>
+<br>
 v5.4.0.4<br>
 =================<br>
 * In boss fights show at least 3 boss bars in Siege of Orgrimmar when Enemy Group used<br>
