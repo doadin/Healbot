@@ -1037,17 +1037,21 @@ function HealBot_Lang_enALL()
 	Drov The Ruiner
     --Tarlna The Ageless]]	
 	[HEALBOT_DEBUFF_COLOSSAL_BLOW]           = 3, -- Tarlna The Ageless
-	[HEALBOT_DEBUFF_SAVAGE_VINES]            = 11, -- Tarlna The Ageless
 	[HEALBOT_DEBUFF_NOXIOUS_SPIT]            = 8, -- Tarlna The Ageless
 	--Rukhmar
 	[HEALBOT_DEBUFF_PIERCED_ARMOR]           = 9, -- Rukhmar
 		
 	--[[=GetMapNameByID(944) or "--Highmaul" 
-	Trash
-	--The Butcher]]
+	Trash]]
+	[HEALBOT_DEBUFF_TAINED_CLAWS]            = 11, -- Trash
+	[HEALBOT_DEBUFF_RADIATING_POISON]        = 10, -- Trash 
+	[HEALBOT_DEBUFF_RUNE_OF_DESTRUCTION]     = 10, -- Trash  
+	[HEALBOT_DEBUFF_RUNE_OF_DISINTEGRATION]  = 10, -- Trash
+	[HEALBOT_DEBUFF_RENDING_SLASH]           = 10, -- Trash
+	--The Butcher
 	[HEALBOT_DEBUFF_GUSHING_WOUNDS]          = 5, -- The Butcher  
 	[HEALBOT_DEBUFF_THE_TENDERIZER]          = 11, -- The Butcher  
-	[HEALBOT_DEBUFF_THE_CLEAVER]             = 3, -- The Butcher
+	[HEALBOT_DEBUFF_THE_CLEAVER]             = 11, -- The Butcher
 	[HEALBOT_DEBUFF_PALE_VITRIOL]            = 9, -- The Butcher
 	--Kargath Bladefist
 	[HEALBOT_DEBUFF_IMPALE]                  = 6, -- Kargath Bladefist
@@ -1058,7 +1062,7 @@ function HealBot_Lang_enALL()
 	[HEALBOT_DEBUFF_VILE_BREATH]             = 12, -- Kargath Bladefist
 	[HEALBOT_DEBUFF_IRON_BOMB]               = 6, -- Kargath Bladefist
 	[HEALBOT_DEBUFF_GRAPPLE]                 = 5, -- Kargath Bladefist
-	[HEALBOT_DEBUFF_ON_THE_HUNT]             = 9, -- Kargath Bladefist
+	[HEALBOT_DEBUFF_FLAME_JET]               = 4, -- Kargath Bladefist
 	--Twin Ogron 
 	[HEALBOT_DEBUFF_ENFEEBLING_ROAR]         = 4, -- Twin Ogron
 	[HEALBOT_DEBUFF_BLAZE]                   = 2, -- Twin Ogron
@@ -1068,8 +1072,10 @@ function HealBot_Lang_enALL()
 	[HEALBOT_DEBUFF_ARCANE_VOLATILITY]       = 2, -- Twin Ogron
 	--Ko'ragh
 	[HEALBOT_DEBUFF_CAUSTIC_ENERGY]          = 3, -- Ko'ragh
+	[HEALBOT_DEBUFF_SUPPRESSION_FIELD]       = 11, -- Ko'ragh
 	[HEALBOT_DEBUFF_EXPEL_MAGIC_SHADOW]      = 4, -- Ko'ragh
 	[HEALBOT_DEBUFF_EXPEL_MAGIC_ARCANE]      = 4, -- Ko'ragh
+	[HEALBOT_DEBUFF_EXPEL_MAGIC_FROST]       = 4, -- Ko'ragh
 	[HEALBOT_DEBUFF_DOMINATING_POWER]        = 3, -- Ko'ragh
 	[HEALBOT_DEBUFF_EXPEL_MAGIC_FEL]         = 4, -- Ko'ragh
 	--Tectus
@@ -1137,6 +1143,7 @@ function HealBot_Lang_enALL()
 	[HEALBOT_DEBUFF_INFERNO_SLICE]           = 6, -- Gruul
 	[HEALBOT_DEBUFF_INFERNO_STRIKE]          = 6, -- Gruul
 	[HEALBOT_DEBUFF_OVERWHELMING_BLOWS]      = 9, -- Gruul
+	[HEALBOT_DEBUFF_CAVE_IN]                 = 3, -- Gruul
 	[HEALBOT_DEBUFF_FLARE]                   = 4, -- Gruul
 	--Kromog
 	[HEALBOT_DEBUFF_RUNE_OF_GRASPING_EARTH]  = 10, -- Kromog
@@ -1148,6 +1155,9 @@ function HealBot_Lang_enALL()
 	[HEALBOT_DEBUFF_EXPLOSIVE_SHARD]         = 4, -- Oregorger
 	[HEALBOT_DEBUFF_ACID_MAW]                = 2, -- Oregorger
 	--The Iron Maidens
+	[HEALBOT_DEBUFF_PENETRATING_SHOT]        = 9, -- The Iron Maidens 
+	[HEALBOT_DEBUFF_DARK_HUNT]               = 3, -- The Iron Maidens 
+	[HEALBOT_DEBUFF_SANGUINE_STRIKES]        = 11, -- The Iron Maidens 	
 	[HEALBOT_DEBUFF_SORKAS_PREY]             = 11, -- The Iron Maidens
 	[HEALBOT_DEBUFF_MARAKS_BLOODCALLING]     = 8, -- The Iron Maidens
 	[HEALBOT_DEBUFF_DEADLY_THROW]            = 3, -- The Iron Maidens	

@@ -1,4 +1,4 @@
-HealBot_lastVerSkinUpdate="5.4.0.0"
+HealBot_lastVerSkinUpdate="6.0.0.0"
 
 HealBot_Default_Textures={
     [1]= {name="HealBot 01", file=[[Interface\Addons\HealBot\Images\bar1.tga]]},
@@ -620,14 +620,18 @@ HealBot_GlobalsDefaults = {
 	Drov The Ruiner
     --Tarlna The Ageless]]	
 	[HEALBOT_DEBUFF_COLOSSAL_BLOW]           = 12, -- Tarlna The Ageless
-	[HEALBOT_DEBUFF_SAVAGE_VINES]            = 10, -- Tarlna The Ageless
 	[HEALBOT_DEBUFF_NOXIOUS_SPIT]            = 10, -- Tarlna The Ageless
 	--Rukhmar
 	[HEALBOT_DEBUFF_PIERCED_ARMOR]           = 11, -- Rukhmar
 		
 	--[[= GetMapNameByID(944) or "--Highmaul" 
-	Trash
-	The Butcher]]
+	Trash]]
+	[HEALBOT_DEBUFF_TAINED_CLAWS]            = 10, -- Trash  
+	[HEALBOT_DEBUFF_RADIATING_POISON]        = 10, -- Trash 
+	[HEALBOT_DEBUFF_RUNE_OF_DESTRUCTION]     = 9, -- Trash  
+	[HEALBOT_DEBUFF_RUNE_OF_DISINTEGRATION]  = 10, -- Trash
+	[HEALBOT_DEBUFF_RENDING_SLASH]           = 10, -- Trash  	
+	--The Butcher
 	[HEALBOT_DEBUFF_GUSHING_WOUNDS]          = 10, -- The Butcher  
 	[HEALBOT_DEBUFF_THE_TENDERIZER]          = 11, -- The Butcher  
 	[HEALBOT_DEBUFF_THE_CLEAVER]             = 10, -- The Butcher
@@ -638,10 +642,10 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_MONSTERS_BRAWL]          = 12, -- Kargath Bladefist
 	[HEALBOT_DEBUFF_BERSERKER_RUSH]          = 9, -- Kargath Bladefist
 	[HEALBOT_DEBUFF_MAULING_BREW]            = 10, -- Kargath Bladefist
-	[HEALBOT_DEBUFF_VILE_BREATH]             = 11, -- Kargath Bladefist
+	[HEALBOT_DEBUFF_VILE_BREATH]             = 12, -- Kargath Bladefist
 	[HEALBOT_DEBUFF_IRON_BOMB]               = 10, -- Kargath Bladefist
-	[HEALBOT_DEBUFF_GRAPPLE]                 = 10, -- Kargath Bladefist
-	[HEALBOT_DEBUFF_ON_THE_HUNT]             = 9, -- Kargath Bladefist
+	[HEALBOT_DEBUFF_GRAPPLE]                 = 11, -- Kargath Bladefist
+	[HEALBOT_DEBUFF_FLAME_JET]               = 10, -- Kargath Bladefist
 	--Twin Ogron 
 	[HEALBOT_DEBUFF_ENFEEBLING_ROAR]         = 11, -- Twin Ogron
 	[HEALBOT_DEBUFF_BLAZE]                   = 10, -- Twin Ogron
@@ -651,12 +655,14 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_ARCANE_VOLATILITY]       = 9, -- Twin Ogron
 	--Ko'ragh
 	[HEALBOT_DEBUFF_CAUSTIC_ENERGY]          = 9, -- Ko'ragh
-	[HEALBOT_DEBUFF_EXPEL_MAGIC_SHADOW]      = 11, -- Ko'ragh
+	[HEALBOT_DEBUFF_SUPPRESSION_FIELD]       = 10, -- Ko'ragh
+	[HEALBOT_DEBUFF_EXPEL_MAGIC_SHADOW]      = 9, -- Ko'ragh
 	[HEALBOT_DEBUFF_EXPEL_MAGIC_ARCANE]      = 11, -- Ko'ragh
-	[HEALBOT_DEBUFF_DOMINATING_POWER]        = 9, -- Ko'ragh
-	[HEALBOT_DEBUFF_EXPEL_MAGIC_FEL]         = 12, -- Ko'ragh
+	[HEALBOT_DEBUFF_EXPEL_MAGIC_FROST]       = 10, -- Ko'ragh
+	[HEALBOT_DEBUFF_DOMINATING_POWER]        = 12, -- Ko'ragh
+	[HEALBOT_DEBUFF_EXPEL_MAGIC_FEL]         = 10, -- Ko'ragh
 	--Tectus
-	[HEALBOT_DEBUFF_CRYSTALLINE_BARRAGE]     = 11, -- Tectus
+	[HEALBOT_DEBUFF_CRYSTALLINE_BARRAGE]     = 10, -- Tectus
 	[HEALBOT_DEBUFF_PETRIFICATION]           = 11, -- Tectus
 	--Brackenspore
 	[HEALBOT_DEBUFF_INFESTING_SPORES]        = 10, -- Brackenspore
@@ -667,7 +673,7 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_FLESH_EATER]             = 11, -- Brackenspore
 	--Imperator Mar'gok 
 	[HEALBOT_DEBUFF_BRANDED]                 = 9, -- Imperator Mar'gok 
-	[HEALBOT_DEBUFF_DESTRUCTIVE_RESONANCE]   = 10, -- Imperator Mar'gok 
+	[HEALBOT_DEBUFF_DESTRUCTIVE_RESONANCE]   = 11, -- Imperator Mar'gok 
 	[HEALBOT_DEBUFF_FORCE_NOVA]              = 10, -- Imperator Mar'gok 
 	[HEALBOT_DEBUFF_MARK_OF_CHAOS]           = 9, -- Imperator Mar'gok 
 	[HEALBOT_DEBUFF_FIXATE]                  = 9, -- Imperator Mar'gok 
@@ -682,18 +688,19 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_MOLTEN_SLAG]             = 10, -- Blackhand
 	[HEALBOT_DEBUFF_BURNED]                  = 11, -- Blackhand
 	[HEALBOT_DEBUFF_SHATTERING_SMASH]        = 12, -- Blackhand
-	[HEALBOT_DEBUFF_OVERHEATED]              = 10, -- Blackhand	
+	[HEALBOT_DEBUFF_OVERHEATED]              = 10, -- Blackhand
+	--[HEALBOT_DEBUFF_ATTACH_SLAG_BOMBS]       = 9, -- Blackhand 157000	
 	--Beastlord Darmac
 	[HEALBOT_DEBUFF_PINNED_DOWN]             = 9, -- Beastlord Darmac
 	[HEALBOT_DEBUFF_REND_AND_TEAR]           = 10, -- Beastlord Darmac
 	[HEALBOT_DEBUFF_SEARED_FLESH]            = 11, -- Beastlord Darmac
 	[HEALBOT_DEBUFF_CRUSH_ARMOR]             = 11, -- Beastlord Darmac
-	[HEALBOT_DEBUFF_EPICENTRE]               = 11, -- Beastlord Darmac
-	[HEALBOT_DEBUFF_UNSTEADY]                = 11, -- Beastlord Darmac
-	[HEALBOT_DEBUFF_FLAME_INFUSION]          = 11, -- Beastlord Darmac
+	[HEALBOT_DEBUFF_EPICENTRE]               = 10, -- Beastlord Darmac
+	[HEALBOT_DEBUFF_UNSTEADY]                = 11, -- Beastlord Darmac Mythic
+	[HEALBOT_DEBUFF_FLAME_INFUSION]          = 10, -- Beastlord Darmac
 	--Flamebender Ka'graz
-	[HEALBOT_DEBUFF_LAVA_SLASH ]             = 10, -- Flamebender Ka'graz
-	[HEALBOT_DEBUFF_BLAZING_RADIANCE]        = 9, -- Flamebender Ka'graz
+	[HEALBOT_DEBUFF_LAVA_SLASH]              = 10, -- Flamebender Ka'graz
+	[HEALBOT_DEBUFF_BLAZING_RADIANCE]        = 10, -- Flamebender Ka'graz
 	[HEALBOT_DEBUFF_FIXATE]                  = 9, -- Flamebender Ka'graz
 	[HEALBOT_DEBUFF_CHARRING_BREATH]         = 11, -- Flamebender Ka'graz
 	[HEALBOT_DEBUFF_RISING_FLAME]            = 10, -- Flamebender Ka'graz
@@ -702,6 +709,7 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_ENKINDLE]                = 10, -- Operator Thogar
 	[HEALBOT_DEBUFF_PROTOTYPE_PULSE_GRENADE] = 10, -- Operator Thogar
 	[HEALBOT_DEBUFF_SERRATED_SLASH]          = 10, -- Operator Thogar
+	--[HEALBOT_DEBUFF_LAVA_SHOCK]              = 10, -- Operator Thogar 156310
 	[HEALBOT_DEBUFF_BURNING]                 = 10, -- Operator Thogar
 	--The Blast Furnace
 	[HEALBOT_DEBUFF_TEMPERED]                = 11, -- The Blast Furnace
@@ -720,7 +728,8 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_INFERNO_SLICE]           = 10, -- Gruul
 	[HEALBOT_DEBUFF_INFERNO_STRIKE]          = 11, -- Gruul
 	[HEALBOT_DEBUFF_OVERWHELMING_BLOWS]      = 11, -- Gruul
-	[HEALBOT_DEBUFF_FLARE]                   = 11, -- Gruul
+	[HEALBOT_DEBUFF_CAVE_IN]                 = 10, -- Gruul
+	[HEALBOT_DEBUFF_FLARE]                   = 11, -- Gruul Mythic
 	--Kromog
 	[HEALBOT_DEBUFF_RUNE_OF_GRASPING_EARTH]  = 10, -- Kromog
 	[HEALBOT_DEBUFF_WARPED_ARMOR]            = 11, -- Kromog
@@ -731,6 +740,9 @@ HealBot_GlobalsDefaults = {
 	[HEALBOT_DEBUFF_EXPLOSIVE_SHARD]         = 12, -- Oregorger
 	[HEALBOT_DEBUFF_ACID_MAW]                = 10, -- Oregorger
 	--The Iron Maidens
+	[HEALBOT_DEBUFF_PENETRATING_SHOT]        = 9, -- The Iron Maidens 164271
+	[HEALBOT_DEBUFF_DARK_HUNT]               = 9, -- The Iron Maidens 158315
+	[HEALBOT_DEBUFF_SANGUINE_STRIKES]        = 9, -- The Iron Maidens 156601
 	[HEALBOT_DEBUFF_SORKAS_PREY]             = 11, -- The Iron Maidens
 	[HEALBOT_DEBUFF_MARAKS_BLOODCALLING]     = 11, -- The Iron Maidens
 	[HEALBOT_DEBUFF_DEADLY_THROW]            = 11, -- The Iron Maidens	
