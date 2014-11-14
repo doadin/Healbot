@@ -315,7 +315,6 @@ function HealBot_Options_setLists()
         HEALBOT_WORD_BATTLEGROUND.." 10",
         HEALBOT_WORD_BATTLEGROUND.." 15",
         HEALBOT_WORD_BATTLEGROUND.." 40",
-        HEALBOT_WORD_PETBATTLE,
     }
 
     HealBot_Options_AggroAlertLevel_List = {

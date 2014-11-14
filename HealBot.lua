@@ -1903,8 +1903,6 @@ function HealBot_OnEvent(self, event, ...)
         if HealBot_Unit_Button[arg1] then HealBot_Action_ResetUnitStatus(arg1) end
     elseif (event=="ZONE_CHANGED_NEW_AREA") or (event=="ZONE_CHANGED")  or (event=="ZONE_CHANGED_INDOORS") then
         HealBot_OnEvent_ZoneChanged(self);
-    elseif (event=="PET_BATTLE_OPENING_START") or (event=="PET_BATTLE_CLOSE") then
-        HealBot_OnEvent_PetBattleStartStop(self);
     elseif (event=="READY_CHECK") then
         HealBot_OnEvent_ReadyCheck(self,arg1,arg2);
     elseif (event=="READY_CHECK_CONFIRM") then
@@ -2205,8 +2203,6 @@ function HealBot_Register_Events()
         HealBot:RegisterEvent("UNIT_CONNECTION");
         HealBot:RegisterEvent("COMPANION_LEARNED");
         HealBot:RegisterEvent("PLAYER_CONTROL_GAINED");
-        HealBot:RegisterEvent("PET_BATTLE_OPENING_START");
-        HealBot:RegisterEvent("PET_BATTLE_CLOSE");
         if HealBot_Globals.EnLibQuickHealth then HealBot:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED") end
     end
     HealBot:RegisterEvent("GROUP_ROSTER_UPDATE");
@@ -2321,8 +2317,6 @@ function HealBot_UnRegister_Events()
 	HealBot:UnregisterEvent("INSPECT_READY");
     HealBot:UnregisterEvent("CHARACTER_POINTS_CHANGED");
     HealBot:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
-    HealBot:UnregisterEvent("PET_BATTLE_OPENING_START");
-    HealBot:UnregisterEvent("PET_BATTLE_CLOSE");
 end
 
 function HealBot_CheckUnitAggro(unit)
@@ -4124,11 +4118,6 @@ function HealBot_OnEvent_PartyMembersChanged(self)
     HealBot_luVars["CheckAllHealth"]=true
 end
 
-function HealBot_OnEvent_PetBattleStartStop(self)
-    HealBot_luVars["CheckSkin"]=true
-    if HealBot_Data["REFRESH"]<4 then HealBot_Data["REFRESH"]=4; end
-end
-
 function HealBot_PartyUpdate_CheckSkin()
     local _,z = IsInInstance()
     local PrevSolo=HealBot_luVars["IsSolo"]
@@ -4213,16 +4202,6 @@ function HealBot_PartyUpdate_CheckSkin()
         if HealBot_Config.SkinDefault[Healbot_Config_Skins.Current_Skin]~=3 then
             for x in pairs (Healbot_Config_Skins.Skins) do
                 if HealBot_Config.SkinDefault[Healbot_Config_Skins.Skins[x]]==3 then
-                    HealBot_Data["REFRESH"]=0
-                    HealBot_Options_Set_Current_Skin(Healbot_Config_Skins.Skins[x])
-                    break
-                end
-            end
-        end
-    elseif C_PetBattles.IsInBattle() then
-        if HealBot_Config.SkinDefault[Healbot_Config_Skins.Current_Skin]~=11 then
-            for x in pairs (Healbot_Config_Skins.Skins) do
-                if HealBot_Config.SkinDefault[Healbot_Config_Skins.Skins[x]]==11 then
                     HealBot_Data["REFRESH"]=0
                     HealBot_Options_Set_Current_Skin(Healbot_Config_Skins.Skins[x])
                     break
