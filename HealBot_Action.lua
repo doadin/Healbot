@@ -310,19 +310,21 @@ function HealBot_Action_setpcClass()
             local prevHealBot_pcMax=HealBot_pcMax;
             if HealBot_Data["PCLASSTRIM"]==HealBot_Class_En[HEALBOT_PALADIN] then
                 HealBot_pcClass[j]=9
-                if UnitLevel("player")<85 then
-                    HealBot_pcMax=3
-                else
-                    HealBot_pcMax=5
-                end
+                HealBot_pcMax = UnitPowerMax("player" , 9);
+                --if UnitLevel("player")<85 then
+                --    HealBot_pcMax=3
+                --else
+                --    HealBot_pcMax=5
+                --end
             else
                 HealBot_pcClass[j]=12
-                local _, talent = GetTalentRowSelectionInfo(3)
-                if talent==8 then
-                    HealBot_pcMax=5
-                else
-                    HealBot_pcMax=4
-                end
+                HealBot_pcMax = UnitPowerMax("player" , 12);
+                --local _, talent = GetTalentRowSelectionInfo(3)
+                --if talent==8 then
+                --    HealBot_pcMax=5
+                --else
+                --    HealBot_pcMax=4
+                --end
             end     
             if prevHealBot_pcMax~=HealBot_pcMax then
                 HealBot_Action_clearResetBarSkinDone()
