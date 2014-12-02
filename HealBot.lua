@@ -1104,7 +1104,7 @@ function HealBot_OnUpdate(self)
                     HealBot_Reset_flag=nil
                 elseif HealBot_luVars["UseCrashProtection"] and HealBot_luVars["UseCrashProtection"]<GetTime() then 
                         HealBot_luVars["UseCrashProtection"]=nil
-                        if HealBot_Data["REFRESH"]<7 then HealBot_Data["REFRESH"]=7; end
+                        HealBot_Data["REFRESH"]=4
                 elseif HealBot_Data["REFRESH"]>0 then
                     HealBot_Data["REFRESH"]=HealBot_Data["REFRESH"]+1
                     if HealBot_Data["REFRESH"]==5 and HealBot_luVars["CheckSkin"] then
@@ -1117,9 +1117,9 @@ function HealBot_OnUpdate(self)
                     end
                 elseif HealBot_CheckTalents and HealBot_CheckTalents<GetTime() then
                     HealBot_CheckTalents=false; 
+                    HealBot_GetTalentInfo(HealBot_Data["PGUID"], "player")
                     HealBot_setHbStanceBuffs()
                     HealBot_Options_setDebuffTypes()
-                    HealBot_GetTalentInfo(HealBot_Data["PGUID"], "player")
                     HealBot_setOptions_Timer(5)
                     HealBot_setOptions_Timer(15)
                     HealBot_Options_ResetDoInittab(10)
