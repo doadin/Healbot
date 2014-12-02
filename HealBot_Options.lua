@@ -4636,6 +4636,7 @@ function HealBot_Options_SelectHealSpellsCombo_DDlist()
             HEALBOT_BLACKOUT_KICK,
             HEALBOT_TOUCH_OF_DEATH,
             HEALBOT_CRACKLING_JADE_LIGHTNING,
+            HEALBOT_HOLY_WORD_CHASTISE,
             HEALBOT_DENOUNCE,
             HEALBOT_HAMMER_OF_WRATH,
             HEALBOT_HOLY_SHOCK,
@@ -4691,6 +4692,7 @@ function HealBot_Options_SelectHealSpellsCombo_DDlist()
             HEALBOT_MENDPET,
             HEALBOT_HEALTH_FUNNEL,
             HEALBOT_HOLY_WORD_SERENITY,
+            HEALBOT_HOLY_WORD_SANCTUARY,
             HEALBOT_SOOTHING_MIST,
             HEALBOT_ZEN_MEDITATION,
             HEALBOT_LIFE_COCOON,
@@ -9398,6 +9400,13 @@ function HealBot_Options_Init(tabNo)
         HealBot_HighlightActiveBarColour:SetStatusBarTexture(LSM:Fetch('statusbar',HealBot_Default_Textures[16].name));
         HealBot_HighlightTargetBarColour:SetStatusBarTexture(LSM:Fetch('statusbar',HealBot_Default_Textures[16].name));
         HealBot_Aggro3Colorpick:SetStatusBarTexture(LSM:Fetch('statusbar',HealBot_Default_Textures[16].name));
+    end
+end
+
+function HealBot_Options_ResetSpellsHealperDropdown(ddType)
+    if ddType=="SPELLS" then
+        DoneInitTab[801]=nil
+        HealBot_Options_InitSub(801)
     end
 end
 
