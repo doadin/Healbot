@@ -523,7 +523,8 @@ function HealBot_Options_setLists()
 		[HEALBOT_SURGE_OF_DARKNESS]=HEALBOT_PRIEST,               
 		[HEALBOT_SURGE_OF_LIGHT]=HEALBOT_PRIEST,                  
 		[HEALBOT_ASCENSION]=HEALBOT_PRIEST,                       
-		[HEALBOT_WORD_OF_MENDING]=HEALBOT_PRIEST,                 
+		[HEALBOT_WORD_OF_MENDING]=HEALBOT_PRIEST,
+        [HEALBOT_WORDS_OF_MENDING]=HEALBOT_PRIEST, 
 		[HEALBOT_CLARITY_OF_WILL]=HEALBOT_PRIEST,                 
 		[HEALBOT_SAVING_GRACE]=HEALBOT_PRIEST,                    
 		[HEALBOT_CLARITY_OF_PURPOSE]=HEALBOT_PRIEST,
@@ -684,6 +685,7 @@ function HealBot_Options_InitBuffSpellsClassList(tClass)
         HealBot_Buff_Spells_Class_List = {
             HEALBOT_POWER_WORD_FORTITUDE,
             HEALBOT_FEAR_WARD,
+			HEALBOT_SHADOWFORM,
         }
     elseif tClass=="ROGU" then
         HealBot_Buff_Spells_Class_List = {
@@ -4621,6 +4623,7 @@ function HealBot_Options_SelectHealSpellsCombo_DDlist()
             HEALBOT_JUDGMENT,
             HEALBOT_CRUSADER_STRIKE,
             HEALBOT_CHAIN_LIGHTNING,
+            HEALBOT_ELEMENTAL_BLAST,
             HEALBOT_FLAME_SHOCK,
             HEALBOT_FROST_SHOCK,
             HEALBOT_MAGE_BOMB,
